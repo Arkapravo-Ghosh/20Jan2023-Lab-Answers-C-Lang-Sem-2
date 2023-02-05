@@ -1,12 +1,9 @@
 #include <stdio.h>
 int main() {
-    double a, b;
+    double a;
     printf("Enter a number: ");
     scanf("%lf", &a);
-    double d = (int)a;
-    b = a - d;
-    d = (int)(b * 10);
-    b = (int)(b * 100) % 10;
-    printf("The required output is %d.\n", (int)(b + d));
+    int b=(int)a*100;
+    printf("The required output is %d.\n",(b%10)+((b/10)%10));
     return 0;
 }
